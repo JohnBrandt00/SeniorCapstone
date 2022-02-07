@@ -1,0 +1,30 @@
+name: .NET Panopticon
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore ./PanOpticon/
+    - name: publish
+      run: dotnet publish ./PanOpticon/ --runtime linux-x64 --self-contained true
+    - name: remove
+      run: rm -rf /home/builds/*
+    - name: move
+      run: mv ./PanOpticon/PanOpticon/bin/Debug/net5.0/linux-x64/publish/* /home/builds
+    - name: reload
+      run: systemctl restart Pano.service
+   
