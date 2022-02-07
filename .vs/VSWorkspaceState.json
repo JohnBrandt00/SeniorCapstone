@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\PanOpticon",
+    "\\PanOpticon\\PanOpticon",
+    "\\PanOpticon\\PanOpticon\\Areas",
+    "\\PanOpticon\\PanOpticon\\Areas\\Identity",
+    "\\PanOpticon\\PanOpticon\\Areas\\Identity\\Pages",
+    "\\PanOpticon\\PanOpticon\\Areas\\Identity\\Pages\\Account",
+    "\\PanOpticon\\PanOpticon\\Views",
+    "\\PanOpticon\\PanOpticon\\Views\\Home",
+    "\\PanOpticon\\PanOpticon\\Views\\KanboardNotes"
+  ],
+  "SelectedNode": "\\PanOpticon\\PanOpticon\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+  "PreviewInSolutionExplorer": false
+}
